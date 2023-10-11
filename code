@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+long long n, i = 1, a, gaus, s = 0, lipsa;
+
+int main()
+{
+    ifstream fin("lipsa.in");
+    ofstream fout("lipsa.out");
+
+    fin >> n;
+
+    gaus = n * (n + 1) / 2;
+
+    while(i < n)
+    {
+        fin >> a;
+        s = s + a;
+        i ++;
+    }
+    
+    lipsa = gaus - s;
+    
+    fout << lipsa;
+
+    return 0;
+}
